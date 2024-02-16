@@ -1,0 +1,18 @@
+[
+  {
+    "model": "gearmasterapi.user",
+    "pk": 1,
+    "fields": {
+      "name": "Brantley",
+      "uid": "firebaseTest"
+    }
+  },
+  {
+    "model": "gearmasterapi.user",
+    "pk": 2,
+    "fields": {
+      "name": "Nikol",
+      "uid": "firebaseTest"
+    }
+  }
+]

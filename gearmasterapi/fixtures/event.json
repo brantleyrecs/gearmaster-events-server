@@ -1,0 +1,26 @@
+[
+  {
+    "model": "gearmasterapi.event",
+    "pk": 1,
+    "fields": {
+      "name": "Brantley Wedding",
+      "date": "2018-05-20",
+      "time": "5:00:00",
+      "location": "Emerald Isle",
+      "user": 1,
+      "type": 1
+    }
+  },
+  {
+    "model": "gearmasterapi.event",
+    "pk": 2,
+    "fields": {
+      "name": "Google Conference",
+      "date": "2023-11-03",
+      "time": "5:00:00",
+      "location": "Raleigh",
+      "user": 2,
+      "type": 1
+    }
+  }
+]
