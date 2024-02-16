@@ -1,0 +1,18 @@
+[
+  {
+    "model": "gearmasterapi.gear",
+    "pk": 1,
+    "fields": {
+      "name": "12 inch QSC Speaker",
+      "info": "12 inch speaker"
+    }
+  },
+  {
+    "model": "gearmasterapi.gear",
+    "pk": 2,
+    "fields": {
+      "name": "X32 Console",
+      "info": "Mixing Console"
+    }
+  }
+]

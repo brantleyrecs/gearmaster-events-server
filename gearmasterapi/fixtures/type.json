@@ -1,0 +1,16 @@
+[
+  {
+    "model": "gearmasterapi.type",
+    "pk": 1,
+    "fields": {
+      "name": "Band"
+    }
+  },
+  {
+    "model": "gearmasterapi.type",
+    "pk": 2,
+    "fields": {
+      "name": "Presentation"
+    }
+  }
+]
