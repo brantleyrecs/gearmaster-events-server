@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from rest_framework import routers
+from gearmasterapi.views import UserView, EventView, GearView, EventGearView, TypeView, check_user, register_user
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'events', EventView, 'event')
+router.register(r'users', UserView, 'user')
+router.register(r'gear', GearView, 'gear')
+router.register(r'event_gear', EventGearView, 'event_gear')
+router.register(r'type', TypeView, 'type')
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
+    path('checkuser', check_user),
+    path('register', register_user),
 ]
