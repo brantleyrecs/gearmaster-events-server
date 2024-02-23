@@ -5,7 +5,7 @@ from rest_framework import serializers, status
 from rest_framework.decorators import action
 from gearmasterapi.models import User, Type, Event, EventGear, Gear
 
-class EventNiew(ViewSet):
+class EventView(ViewSet):
   def list(self, request):
     """Getting all events"""
     events = Event.objects.all()
@@ -15,7 +15,7 @@ class EventNiew(ViewSet):
   def retrieve(self, request, pk):
     """Gets single event"""
     event = Event.objects.get(pk=pk)
-    serializer = EventSerializer(event, many=True)
+    serializer = EventSerializer(event)
     return Response(serializer.data)
   
   def create(self, request):
@@ -71,6 +71,7 @@ class EventNiew(ViewSet):
       )
     return Response(status=status.HTTP_201_CREATED)
   
+  
 class EventGearSerializer(serializers.ModelSerializer):
   name = serializers.ReadOnlyField(source='gear.name')
   info = serializers.ReadOnlyField(source='gear.info')
@@ -85,4 +86,6 @@ class EventSerializer(serializers.ModelSerializer):
   gear = EventGearSerializer(many=True, read_only=True)
   class Meta:
     model = Event
-    fields = ('id', 'name', 'location', 'date', 'time', 'user', 'type', 'event_gear')
+    fields = ('id', 'name', 'location', 'date', 'time', 'user', 'type', 'gear')
+    
+    depth = 2
