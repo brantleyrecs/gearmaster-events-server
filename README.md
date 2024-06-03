@@ -40,3 +40,5 @@ find the folder saying gearmaster-events-server
 }
 
 7: python manage.py runserver
+
+
