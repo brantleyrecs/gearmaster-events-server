@@ -1,4 +1,3 @@
-
 Start up
 
 To set up follow these 7 steps:
